@@ -1,0 +1,29 @@
+<!DOCTYPE=html>
+<html>
+<head>
+<title>MutiTrack</title>
+	<link href="./css/reset.css" type="text/css" rel="stylesheet">
+	<link href="./css/style.css" type="text/css" rel="stylesheet">
+	<link href="./images/favicon.svg" type="image/gif" rel="icon">
+	<script src="./script/script.js"></script>
+</head>
+
+<body>
+
+<div class="container top">
+<!--container for max-width, centered-->
+
+	<div id="heading">
+		<img src="./images/multitrack.svg"/>
+		<p id="tagline">MULTITASKING MADE EASY</p>
+	</div>
+</div>
+<hr>
+
+<div class="container main">
+	<p id="text"></p>
+<button id="newTaskButton" onclick="main.addTask()">NEW TASK</button>
+<button id="runButton" onclick="main.tasks[0].runStop()">RUN/STOP</button>
+</div>
+</body>
+</html>
