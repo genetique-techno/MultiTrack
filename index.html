@@ -1,11 +1,11 @@
 <!DOCTYPE=html>
 <html>
 <head>
+<meta charset="UTF-8">
 <title>MutiTrack</title>
 	<link href="./css/reset.css" type="text/css" rel="stylesheet">
 	<link href="./css/style.css" type="text/css" rel="stylesheet">
 	<link href="./images/favicon.svg" type="image/gif" rel="icon">
-	<script src="./script/script.js"></script>
 </head>
 
 <body>
@@ -21,9 +21,25 @@
 <hr>
 
 <div class="container main">
-	<p id="text"></p>
-<button id="newTaskButton" onclick="main.addTask()">NEW TASK</button>
-<button id="runButton" onclick="main.tasks[0].runStop()">RUN/STOP</button>
+	<div>
+    <form>
+		  <input type="text" id="name-input" value="Enter Name Here">
+	  </form>
+	</div>
+	<div>
+	  <button id="submit-name">SUBMIT</button>
+  </div>
+	<div>
+    <button id="run-pause">RUN/STOP</button>
+  </div>
+	<div>
+    <p id="task-status"></p>
+	</div>
+	<div>
+    <p id="task-time"></p>
+	</div>
 </div>
+
+<script src="./script/script.js"></script>
 </body>
 </html>

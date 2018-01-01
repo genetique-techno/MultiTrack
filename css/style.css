@@ -46,3 +46,31 @@ button {
 button:hover {
 	background-color: #1e0a91;
 }
+
+.main {
+	display: flex;
+	align-items: center;
+}
+
+.main > div {
+	padding: 0.5em;
+	font-family: helvetica;
+	font-weight: bold;
+}
+
+input {
+	border-radius: 0.5em;
+	font-family: helvetica;
+	font-weight: bold;
+}
+
+#name-input:disabled {
+	background-color: white;
+	color: black;
+	border: none;
+	text-align: center;
+}
+
+#run-pause {
+	visibility: hidden;
+}
