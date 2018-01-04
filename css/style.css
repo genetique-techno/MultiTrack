@@ -12,6 +12,11 @@ body {
 	margin: auto;
 }
 
+#container-main {
+	width: 960px;
+	margin: auto;
+}
+
 .main {
 	margin-top: 3em;
 }
@@ -47,12 +52,12 @@ button:hover {
 	background-color: #1e0a91;
 }
 
-.main {
+.task-row {
 	display: flex;
 	align-items: center;
 }
 
-.main > div {
+.task-row > div {
 	padding: 0.5em;
 	font-family: helvetica;
 	font-weight: bold;
