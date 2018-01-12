@@ -57,8 +57,8 @@ button:hover {
 	align-items: center;
 }
 
-.task-row > div {
-	padding: 0.5em;
+.task {
+	margin: 0.5em;
 	font-family: helvetica;
 	font-weight: bold;
 }
@@ -69,13 +69,17 @@ input {
 	font-weight: bold;
 }
 
-#name-input:disabled {
+input:disabled {
 	background-color: white;
 	color: black;
 	border: none;
 	text-align: center;
 }
 
-#run-pause {
+.submit:disabled {
+	background-color: grey;
+}
+
+.run-stop {
 	visibility: hidden;
 }
