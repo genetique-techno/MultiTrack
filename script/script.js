@@ -6,12 +6,6 @@ class TaskList {
 		this.nextTaskInstance = 0;
 	}
 
-	addTask(taskName) {
-
-		let newTask = new Task(taskName);
-		this.tasks.push(newTask);
-	}
-
 	createNewTaskRow() {
 
 		//Define all HTML elements in task row
@@ -42,18 +36,17 @@ class TaskList {
 		taskRow.appendChild(taskStatus);
 		taskRow.appendChild(taskTime);
 
-		const self = this;
 		let taskNum = this.nextTaskInstance;
-		submitButton.addEventListener('click', function(){
-			self.addTask(input.value)
+		submitButton.addEventListener('click', () => {
+			this.tasks.push(new Task(input.value));
 			input.disabled = true;
 			submitButton.disabled = true;
 			runStopButton.style.visibility = 'visible';
 		});
-		runStopButton.addEventListener('click', function(){
-			self.tasks[taskNum].runStop();
-			taskStatus.innerHTML = self.tasks[taskNum].status;
-			taskTime.innerHTML = self.tasks[taskNum].timeFormat();
+		runStopButton.addEventListener('click', () => {
+			this.tasks[taskNum].runStop();
+			taskStatus.innerHTML = this.tasks[taskNum].status;
+			taskTime.innerHTML = this.tasks[taskNum].timeFormat();
 		})
 
 		this.nextTaskInstance ++
